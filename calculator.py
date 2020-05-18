@@ -50,18 +50,17 @@ Por favor, digite qual operação matemática você deseja:
 # Define novamente() função que pergunta ao usuario se ele quer usar novamente a calculadora
 def novamente():
 
-    # Take input from user
     calc_novamente = input('''
 Quer realizar mais cálculos?
 Por favor, digite S para SIM, e N para NÃO.
 ''')
 
     # se o usuario digitar S, roda função calcular() novamente
-    if calc_novamente.upper() == 'S': #upper para transformar o que o usuario entrar, para maísculo :)
+    if (calc_novamente.upper() == 'S') or (calc_novamente.upper() ==  'SIM'): #upper para transformar o que o usuario entrar, para maísculo :)
         calcular()
 
     # Se o usuario digitar N, encerra o programa.
-    elif calc_novamente.upper() == 'N':
+    elif (calc_novamente.upper() == 'N') or (calc_novamente.upper() =='NAO'): #caso o usuario digite NAO
         print('Saindo da Calculadora!')
 
     # Se o usuario digitar outra tecla, roda a função novamente
